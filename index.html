@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Trainer Marlie</title>
+
+
+        <link rel="stylesheet" href = "style.css">
+        <link rel="icon" href="images/logo.svg">
+
+    </head>
+    <body id = "top">
+        <header class="site-header">
+            <a href="#top" class="site-logo">
+                <img src="images/logo.svg" alt="" class="site-logo-image">
+                <span>Trainer Marlie</span>
+            </a>
+
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="#socials">Socials</a>
+                <a href="#pokemon">Pokémon</a>
+                <a href="#trades">Trade Binder</a>
+            </nav>
+        </header>
+
+        <div class = "content-container">
+            <div class = "header-container">
+                <div class = "header-item">
+                    <h1 class = "header-item">
+                        Trainer Marlie
+                    </h1>
+                    <p class = "header-item">
+                        Welcome to my website! I made this for fun. Click on my social links below to connect with me, try to get a shiny Pokémon, or look through my trade binder.
+                        <br><br>
+                        Let me know what Pokémon joined you on your land to this page!
+                    </p>
+                    <a class ="status-indicator"
+                        href = "https://championships.pokemon.com/en-us/events/regionals/2027/las-vegas"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        Next Event: Las Vegas Regional 2027
+                    </a>
+                </div>
+                <div class="profile-flip header-item">
+                    <div class="profile-flip-inner">
+
+                        <!-- Front: Online profile picture -->
+                        <div class="profile-flip-front">
+                            <img src="images/profile.png" alt="Online profile picture">
+                        </div>
+
+                        <!-- Back: IRL picture -->
+                        <div class="profile-flip-back">
+                            <img src="images/irl.jpg" alt="Photo of me in real life">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class = "content-container" id = "socials">
+            <div class = "socials-container">
+                <a class = "socials-card"
+                    href="https://www.youtube.com/@trainer_marlie"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <img class = "social-logo" src = "images/youtube.jpg" alt = "YouTube Channel">
+                    <h1 class = "screen-name">YouTube</h1>
+                </a>
+                <a class = "socials-card"
+                    href = "https://discord.gg/bAThxUYvA"
+                    target = "_blank"
+                    rel = "noopener noreferrer">
+
+                    <img class = "social-logo" src = "images/discord.jpg" alt = "Discord">
+                    <h1 class = "screen-name">Discord</h1>
+                </a>
+                <a class = "socials-card"
+                    href ="https://x.com/trainermarlie"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <img class = "social-logo" src = "images/twitter.jpg" alt = "Twitter">
+                    <h1 class = "screen-name">Twitter</h1>
+                </a>
+                <a class = "socials-card"
+                    href = "https://www.pokebeach.com/forums/members/trainermarlie.188921/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <img class="social-logo" src="images/pokebeach.jpg" alt="PokéBeach">
+                    <h1 class = "screen-name">PokéBeach</h1>
+                </a>
+            </div>
+        </div>
+
+        <div class = "content-container" id="pokemon">
+            <div class="randomizer-container">
+            <h1>Who's That Pokémon?</h1>
+
+            <div id="pokemon-display">
+                <p id="pokemon-status">Finding your Pokémon...</p>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="content-container trade-container" id="trades">
+            <h1>Want to trade?</h1>
+
+            <iframe
+                src="https://tcgpages.com/b/cmvagpeei000206l82uophxqj"
+                class="trade-iframe"
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <footer class="site-footer">
+            <div class="site-footer-actions">
+
+            <a class="footer-button"
+                href="mailto:trainermarlie@mail.com">
+                Contact me
+            </a>
+
+            <a class="footer-button"
+                href="#top">
+                Back to top
+            </a>
+
+            </div>
+
+            <p class="site-footer-copyright">
+                2026 Trainer Marlie
+            </p>
+        </footer>
+
+        <script src="randomizer.js"></script>
+    </body>
+</html>
