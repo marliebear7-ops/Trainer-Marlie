@@ -20,11 +20,11 @@ const featuredCards = [
 /* ---------- Physical Card Photographs ---------- */
 
 const physicalCardPhotos = {
-    "sv08-247": "images/trade-cards/sv08-247.jpg",
+    "sv08-247": "images/trade-cards/sv08-247.JPG",
     "dpp-DP34" : "images/trade-cards/dpp-DP34.jpg",
     "pop9-5" : "images/trade-cards/pop9-5.jpg",
-    "me03-095" : "images/trade-cards/me03-095.jpg",
-    "me01-160" : "images/trade-cards/me01-160.jpg",
+    "me03-095" : "images/trade-cards/me03-095.JPG",
+    "me01-160" : "images/trade-cards/me01-160.JPG",
     "30th-133" : "images/trade-cards/30th-133.jpg",
     "sv08-214" : "images/trade-cards/sv08-214.jpg",
     "sv10-194" : "images/trade-cards/sv10-194.jpg",
