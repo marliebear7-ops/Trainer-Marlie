@@ -8,19 +8,26 @@ const CARD_QUESTION_ENTRY = "entry.1161173784";
 
 const featuredCards = [
     "sv08-247",
-    "sv08-247",
-    "sv08-247",
-    "sv08-247",
-    "sv08-247",
-    "sv08-247",
-    "sv08-247",
-    "sv08-247",
+    "dpp-DP34",
+    "pop9-5",
+    "me03-095",
+    "me01-160",
+    "30th-133",
+    "sv08-214",
+    "sv10-194",
 ];
 
 /* ---------- Physical Card Photographs ---------- */
 
 const physicalCardPhotos = {
-    "sv08-247": "images/trade-cards/sv08-247.png",
+    "sv08-247": "images/trade-cards/sv08-247.jpg",
+    "dpp-DP34" : "images/trade-cards/dpp-DP34.jpg",
+    "pop9-5" : "images/trade-cards/pop9-5.jpg",
+    "me03-095" : "images/trade-cards/me03-095.jpg",
+    "me01-160" : "images/trade-cards/me01-160.jpg",
+    "30th-133" : "images/trade-cards/30th-133.jpg",
+    "sv08-214" : "images/trade-cards/sv08-214.jpg",
+    "sv10-194" : "images/trade-cards/sv10-194.jpg",
 };
 
 /* ---------- Trade Gallery ---------- */
