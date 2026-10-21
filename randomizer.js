@@ -16,10 +16,10 @@ async function loadRandomPokemon() {
 
         const pokemon = await pokemonResponse.json();
 
-        // 1 in 20 chance of a shiny Pokémon.
-        const isShiny = Math.random() < 1 / 20;
+        // 1 in 15 chance of a shiny
+        const isShiny = Math.random() < 1 / 10;
 
-        // Get the species data, including the Pokédex entry.
+        // Get the species data
         const speciesResponse = await fetch(pokemon.species.url);
 
         if (!speciesResponse.ok) {
