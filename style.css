@@ -61,6 +61,20 @@ body {
         var(--background);
 }
 
+
+/* ---------- Hide Scroll Bar ----------*/
+
+html,
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none; 
+}
+
 /* --- Default Content Container --- */
 .content-container {
     display: flex;
@@ -187,7 +201,7 @@ body {
     padding: var(--section-padding);
 
     background: var(--surface);
-    border: 1px solid var(--border);
+    /*border: 1px solid var(--border);*/
     border-radius: var(--radius);
     box-shadow: var(--shadow);
 
@@ -213,7 +227,7 @@ body {
     line-height: 1.7;
 }
 
-/* --- Left Pokémon Randomizer --- */
+/* --- Pokémon Randomizer --- */
 
 .hero-pokemon {
     min-width: 0;
@@ -225,6 +239,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-overflow: clip;
     gap: 0.5rem;
     width: 100%;
     text-align: center;
@@ -234,15 +249,33 @@ body {
     display: block;
     width: 100%;
     max-width: 200px;
+    height: 100%;
+    max-height: 200px;
     aspect-ratio: 1 / 1;
     object-fit: contain;
     cursor: pointer;
 
-    transition: transform 0.25s ease;
+    background: radial-gradient(
+        circle,
+        rgba(180, 154, 216, 0.22) 0%,
+        rgba(180, 154, 216, 0.10) 40%,
+        transparent 72%
+    );
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
 }
 
 #pokemon-display img:hover {
     transform: scale(1.08);
+
+    background: radial-gradient(
+        circle,
+        rgba(180, 154, 216, 0.38) 0%,
+        rgba(180, 154, 216, 0.16) 45%,
+        transparent 75%
+    );
 }
 
 #pokemon-display .pokemon-name {
@@ -258,13 +291,19 @@ body {
     font-size: 0.9rem;
 }
 
-/* --- Right Profile Picture --- */
+/* --- Profile Picture --- */
 
 .hero-container .profile-flip {
     justify-self: center;
     width: clamp(190px, 22vw, 260px);
     aspect-ratio: 1 / 1;
     flex-shrink: 0;
+}
+
+/* ---------- Hero Contact Button ---------- */
+
+.hero-contact-button {
+    margin-top: var(--space-md);
 }
 
 /* --- Responsive Layout --- */
@@ -296,48 +335,7 @@ body {
     }
 }
 
-.status-indicator {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    max-width: 100%;
-    min-height: 32px;
-    padding: 6px 14px;
-    margin: 16px 0 0;
-
-    background: var(--accent-light);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-
-    font-family: "Lexend", sans-serif;
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: var(--text);
-    text-align: center;
-
-    text-decoration: none;
-    line-height: 1.4;
-    overflow-wrap: anywhere;
-
-    transition: background 0.2s ease,
-                border-color 0.2s ease,
-                transform 0.2s ease;
-}
-
-.status-indicator:hover {
-    background: var(--accent-light);
-    border-color: var(--accent);
-    transform: translateY(-2px);
-}
-
-.status-indicator:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 3px;
-}
-
 /* ---------- Profile image flip ---------- */
-
 
 .profile-flip {
     width: clamp(145px, 22vw, 220px);
@@ -363,12 +361,18 @@ body {
     position: absolute;
     inset: 0;
     overflow: hidden;
-    border-radius: 50%;
     border: 3px solid white;
-    outline: 1px solid var(--border);
+    border-radius: 12px;
     box-shadow: var(--shadow);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+
+    transition: border-color 0.25s ease;
+}
+
+.profile-flip:hover .profile-flip-front,
+.profile-flip:hover .profile-flip-back {
+    border-color: var(--accent);
 }
 
 .profile-flip-front img,
@@ -382,9 +386,6 @@ body {
 .profile-flip-back {
     transform: rotateY(180deg);
 }
-
-
-
 /* ---------- Social links ---------- */
 
 .socials-container {
@@ -412,7 +413,7 @@ body {
     padding: 24px 12px;
 
     background: var(--surface);
-    border: 1px solid var(--border);
+    border: 1px solid var(--surface);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
 
@@ -440,7 +441,7 @@ body {
     flex-shrink: 0;
     object-fit: cover;
     border-radius: 50%;
-    border: 1px solid var(--border);
+    /*border: 1px solid var(--border);*/
     transition: transform 0.25s ease;
 }
 
@@ -469,7 +470,7 @@ body {
     padding: 2rem;
     text-align: center;
     background: var(--surface);
-    border: 1px solid var(--border);
+    /*border: 1px solid var(--border);*/
     border-radius: var(--radius);
     box-shadow: var(--shadow);
 }
@@ -524,7 +525,7 @@ body {
     margin: 0 auto;
     padding: 2rem;
     background: var(--surface);
-    border: 1px solid var(--border);
+    /*border: 1px solid var(--border);*/
     border-radius: var(--radius);
     box-shadow: var(--shadow);
 }
@@ -559,7 +560,7 @@ body {
     min-width: 0;
     padding: 1.25rem;
     background: white;
-    border: 1px solid var(--border);
+    /*border: 1px solid var(--border);*/
     border-radius: var(--radius-sm);
     transition:
         transform 0.2s ease,
@@ -658,7 +659,7 @@ body {
 
     text-align: center;
     background: #ffffff;
-    border: 1px solid var(--border);
+    /*border: 1px solid var(--border);*/
     border-radius: var(--radius);
     box-shadow: var(--shadow);
 }
@@ -698,7 +699,7 @@ body {
     padding: 14px;
 
     background: rgba(255, 255, 255, 0.72);
-    border: 1px solid var(--border);
+    border: 1px solid rgba(255, 255, 255, 0.72);
     border-radius: var(--radius);
 
     box-shadow: var(--shadow);
